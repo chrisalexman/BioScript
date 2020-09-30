@@ -1,0 +1,21 @@
+manifest a
+manifest b
+
+functions:
+function foo(p1, p2) {
+   ret = mix p1 with p2
+   return ret
+}
+
+instructions:
+
+aa = dispense a
+bb = dispense b
+aaa = dispense a
+bbb = dispense b
+
+ab = mix aa with bb
+aabb = foo(aaa, bbb)
+aaabbb = foo(ab, aabb)
+
+dispose aaabbb
